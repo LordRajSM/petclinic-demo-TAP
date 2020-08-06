@@ -1,0 +1,33 @@
+pipeline {
+ agent any
+ stages {
+  stage('Build')
+   steps {
+    echo "Building Project"
+   }
+ }
+ stages {
+  stage('Archive')
+   steps {
+    echo "Archiving Project"
+   }
+ }
+ stages {
+  stage('Build Docker Image')
+   steps {
+    echo "Building Docker Image"
+   }
+ }
+ stages {
+  stage('Push Docker Image')
+   steps {
+    echo "Pushing Docker Image"
+   }
+ }
+ stages {
+  stage('Deploy to dev')
+   steps {
+    echo "Deploying to Dev Enviornment"
+   }
+ }
+}
